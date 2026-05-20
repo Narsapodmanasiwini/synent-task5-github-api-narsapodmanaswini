@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Advanced GitHub Explorer</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="background"></div>
+
+    <div class="container">
+
+        <div class="header">
+            <h1>GitHub Explorer</h1>
+            <p>Search and explore GitHub profiles using API integration</p>
+        </div>
+
+        <div class="search-box">
+            <input type="text" id="username" placeholder="Enter GitHub Username">
+            <button onclick="getGithubData()">Search</button>
+        </div>
+
+        <div id="loading" class="loading hidden">
+            Loading...
+        </div>
+
+        <div id="error" class="error hidden"></div>
+
+        <div id="profile-container" class="hidden">
+
+            <div class="profile-card">
+
+                <div class="top-section">
+
+                    <img id="avatar" src="" alt="avatar">
+
+                    <div class="user-info">
+                        <h2 id="name"></h2>
+                        <p id="usernameText"></p>
+                        <p id="bio"></p>
+
+                        <div class="links">
+                            <span id="location"></span>
+                            <span id="company"></span>
+                        </div>
+
+                        <a id="profileLink" target="_blank">
+                            Visit GitHub Profile
+                        </a>
+                    </div>
+                </div>
+
+                <div class="stats">
+
+                    <div class="stat-box">
+                        <h3 id="repos"></h3>
+                        <p>Repositories</p>
+                    </div>
+
+                    <div class="stat-box">
+                        <h3 id="followers"></h3>
+                        <p>Followers</p>
+                    </div>
+
+                    <div class="stat-box">
+                        <h3 id="following"></h3>
+                        <p>Following</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="repo-section">
+                <h2>Latest Repositories</h2>
+
+                <div id="reposContainer" class="repo-grid"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
